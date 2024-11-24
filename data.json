@@ -1,0 +1,31 @@
+{
+  "skills": {
+    "Frontend": ["HTML", "CSS", "Javascript"],
+    "Backend": ["PHP", "Node.js (Express.js)", "Laravel"],
+    "Database": ["MySQL", "PostgreSQL", "MongoDB"]
+  },
+  "experience": [
+    {
+      "role": "Backend Developer (Laravel)",
+      "company": "Paradise Infotech",
+      "duration": "2023 - 2024"
+    },
+    {
+      "role": "Backend Developer (Nodejs)",
+      "company": "Astranix",
+      "duration": "2022 - 2024"
+    }
+  ],
+  "education": [
+    {
+      "course": "BCA",
+      "institution": "Birendra Multiple Campus",
+      "details": "Bachelor in Computer Application"
+    },
+    {
+      "course": "+2",
+      "institution": "New Capital College",
+      "details": "Management (Computer Science)"
+    }
+  ]
+}
