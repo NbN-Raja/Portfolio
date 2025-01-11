@@ -1,533 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nabin Raj Chhetri</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nabin Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-</head>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-<body>
-  <!-- ////////////////////////////////////////////////////////////////////////////////////////
-                               START SECTION 1 - THE NAVBAR SECTION  
-/////////////////////////////////////////////////////////////////////////////////////////////-->
-  <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="">
-        <!-- <img src="images/logo.png" alt="logo image"> -->
-        Nabin
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skill">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">portfolio</a></li>
-          </li>
-        </ul>
-        <button type="button" class="rounded-pill btn-rounded">
-          +977 9865022904
-          <span>
-            <i class="fas fa-phone-alt"></i>
-          </span>
-        </button>
-      </div>
-    </div>
-  </nav>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
-                            START SECTION 2 - THE INTRO SECTION  
-/////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
 
-  <section id="home" class="intro-section">
-    <div class="container">
-      <div class="row align-items-center text-white">
-        <!-- START THE CONTENT FOR THE INTRO -->
-        <div class="col-md-5 col-lg-4 text-center text-md-end mb-4 mb-md-0">
-          <div class="video-box position-relative">
-            <img src="images/arts/nabin-removebg-preview.png" alt="Illustration"
-              class="img-fluid rounded-circle shadow-lg">
-            <div class="video-overlay position-absolute top-50 start-50 translate-middle">
-              <a href="#" class="glightbox">
-                <span>
-                  <i class="fas fa-play-circle text-white" style="font-size: 3rem;"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-7 col-lg-6 text-start">
-          <h1 class="display-3 fw-bold mb-4">
-            <span class="text-gradient">Hey!, I'm Nabin</span>
-          </h1>
-          <p class="lead text-muted hero-text mb-4">
-            A passionate <strong>Backend Developer</strong> who loves solving complex problems and building efficient
-            systems.
-          </p>
-          <button type="button" class="btn btn-primary btn-lg rounded-pill shadow">
-            Get in Touch <i class="fas fa-arrow-right ms-2"></i>
-          </button>
-        </div>
-        <!-- END THE CONTENT FOR THE INTRO -->
-      </div>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#ffffff" fill-opacity="1"
-        d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,133.3C672,139,768,213,864,202.7C960,192,1056,96,1152,74.7C1248,53,1344,107,1392,133.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
-      </path>
-    </svg>
-  </section>
+    <style>
+      .project-item {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
+      .project-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
 
-  <!-- //////////////////////////////////////////////////////////////////////////////////////////////
-                             START SECTION 3 - THE CAMPANIES SECTION  
-////////////////////////////////////////////////////////////////////////////////////////////////////-->
+      .project-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
 
-  <div class="container-xxl py-6 pb-5" id="skill">
-    <div class="container">
-      <div class="row g-5">
-        <!-- Skills Section -->
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-          <h1 class="display-5 mb-4 text-primary">Skills & Experience</h1>
-          <p class="mb-4 text-muted">I specialize in crafting responsive websites, efficient systems, and innovative
-            designs with a focus on scalability and performance.</p>
-          <h3 class="mb-4 text-secondary">My Skills</h3>
-          <div class="row">
-            <!-- Left Column Skills -->
-            <div class="col-md-4">
-              <div class="skill mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h6 class="font-weight-bold text-dark"><i class="fas fa-code"></i> HTML</h6>
-                </div>
-                <div class="progress bg-light shadow-sm">
-                  <div class="progress-bar bg-primary" style="width: 100%;"></div>
-                </div>
-              </div>
-              <div class="skill mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h6 class="font-weight-bold text-dark"><i class="fas fa-paint-brush"></i> CSS</h6>
-                </div>
-                <div class="progress bg-light shadow-sm">
-                  <div class="progress-bar bg-warning" style="width: 85%;"></div>
-                </div>
-              </div>
-              <div class="skill mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h6 class="font-weight-bold text-dark"><i class="fas fa-server"></i> PHP</h6>
-                </div>
-                <div class="progress bg-light shadow-sm">
-                  <div class="progress-bar bg-danger" style="width: 90%;"></div>
-                </div>
-              </div>
-            </div>
-            <!-- Right Column Skills -->
-            <div class="col-md-4">
-              <div class="skill mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h6 class="font-weight-bold text-dark"><i class="fab fa-js"></i> Javascript</h6>
-                </div>
-                <div class="progress bg-light shadow-sm">
-                  <div class="progress-bar bg-success" style="width: 90%;"></div>
-                </div>
-              </div>
-              <div class="skill mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h6 class="font-weight-bold text-dark"><i class="fab fa-node-js"></i> Node.js</h6>
-                </div>
-                <div class="progress bg-light shadow-sm">
-                  <div class="progress-bar bg-dark" style="width: 95%;"></div>
-                </div>
-              </div>
-              <div class="skill mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h6 class="font-weight-bold text-dark"><i class="fab fa-laravel"></i> Laravel</h6>
-                </div>
-                <div class="progress bg-light shadow-sm">
-                  <div class="progress-bar bg-info" style="width: 85%;"></div>
-                </div>
-              </div>
-            </div>
+      .project-item h6 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #132232;
+      }
 
+      .nav-tabs .nav-link {
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+      }
 
-            <div class="col-md-4">
-              <div class="skill mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h6 class="font-weight-bold text-dark"><i class="fas fa-database"></i> MongoDB</h6>
-                </div>
-                <div class="progress bg-light shadow-sm">
-                  <div class="progress-bar bg-success" style="width: 90%;"></div>
-                </div>
-              </div>
-              <div class="skill mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h6 class="font-weight-bold text-dark"><i class="fas fa-database"></i> MySQL</h6>
-                </div>
-                <div class="progress bg-light shadow-sm">
-                  <div class="progress-bar bg-dark" style="width: 95%;"></div>
-                </div>
-              </div>
-              <div class="skill mb-4">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <h6 class="font-weight-bold text-dark"><i class="fas fa-database"></i> PostgreSQL</h6>
-                </div>
-                <div class="progress bg-light shadow-sm">
-                  <div class="progress-bar bg-info" style="width: 85%;"></div>
-                </div>
-              </div>
-            </div>
+      .nav-link {
+        color: #594545;
+      }
 
+      .customtext {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #594545;
+      }
 
+      .btn-custom {
+        background-color: #d9cbc4;
+        color: #594545;
+        border: none;
+        border-radius: 29px;
+        padding: 5px 19px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
 
-          </div>
-        </div>
+      .btn-custom:hover {
+        background-color: #594545;
+        color: #d9cbc4;
+      }
 
-        <!-- Experience and Education Section -->
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-          <ul class="nav nav-pills rounded border border-primary mb-5 shadow-sm">
-            <li class="nav-item w-50">
-              <button class="nav-link active w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-1">Experience</button>
-            </li>
-            <li class="nav-item w-50">
-              <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill" href="#tab-2">Education</button>
-            </li>
-          </ul>
-          <div class="tab-content">
-            <!-- Experience Tab -->
-            <div id="tab-1" class="tab-pane fade show active p-0">
-              <div class="row gy-4">
-                <div class="col-sm-6">
-                  <div class="card border-light shadow-sm p-3">
-                    <h5 class="text-dark">Backend Developer (Laravel)</h5>
-                    <p class="text-primary mb-1">2023 - 2024</p>
-                    <h6 class="text-muted">Paradise Infotech</h6>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="card border-light shadow-sm p-3">
-                    <h5 class="text-dark">Backend Developer(Node.js)</h5>
-                    <p class="text-primary mb-1">2022 - 2024</p>
-                    <h6 class="text-muted">Astranix</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Education Tab -->
-            <div id="tab-2" class="tab-pane fade p-0">
-              <div class="row gy-4">
-                <div class="col-sm-6">
-                  <div class="card border-light shadow-sm p-3">
-                    <h5 class="text-dark">UI Design Course</h5>
-                    <h6 class="text-muted">Birendra Multiple Campus</h6>
-                    <h6 class="text-muted"> Bachelor of Computer Applications</h6>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="card border-light shadow-sm p-3">
-                    <h5 class="text-dark">+2</h5>
-                    <h6 class="text-muted">New Capital College</h6>
-                    <h6 class="text-muted">Management (Computer Science)</h6>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      .nav-tabs .nav-link i {
+        font-size: 1.2rem;
+      }
 
+      .nav-tabs .nav-link:hover {
+        background-color: #d9cbc4;
+        color: #594545;
+        border-color: #d9cbc4;
+      }
 
+      .nav-tabs .nav-link.active {
+        background-color: #d9cbc4;
+        color: #594545;
+        border-color: #d9cbc4;
+      }
+    </style>
+  </head>
 
-  <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Profile Image -->
-        <div class="col-md-6 col-lg-5 d-flex justify-content-center">
-          <div class="img-about img d-flex align-items-center position-relative">
-            <img src="images/portfolio/portfolio-1.jpg" alt="Profile" class="img-fluid rounded-circle shadow-lg"
-              style="width: 80%; border: 5px solid #f1f1f1;">
-          </div>
-        </div>
-        <!-- About Text -->
-        <div class="col-md-6 col-lg-7 pl-lg-5">
-          <div class="about-text">
-            <h2 class="mb-4 text-primary">About Me</h2>
-            <p class="mb-4 text-muted">
-              I am a passionate web developer specializing in crafting responsive websites and efficient systems. With a
-              deep focus on performance and scalability, I aim to deliver exceptional results in every project.
-            </p>
-            <ul class="about-info list-unstyled">
-              <li class="d-flex align-items-center mb-3">
-                <i class="fas fa-user text-primary me-3"></i>
-                <span class="fw-bold">Name:</span> <span class="ms-2">Nabin Raj Chhetri</span>
-              </li>
-              <li class="d-flex align-items-center mb-3">
-                <i class="fas fa-calendar-alt text-primary me-3"></i>
-                <span class="fw-bold">Date of birth:</span> <span class="ms-2">Septemper 10, 2000</span>
-              </li>
-              <li class="d-flex align-items-center mb-3">
-                <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                <span class="fw-bold">Address:</span> <span class="ms-2">Ratnangar-1,Bakulahar Chitwan </span>
-              </li>
-              <li class="d-flex align-items-center mb-3">
-                <i class="fas fa-envelope text-primary me-3"></i>
-                <span class="fw-bold">Email:</span> <span class="ms-2">nabin.raj.chhetri@gmail.com</span>
-              </li>
-              <li class="d-flex align-items-center mb-3">
-                <i class="fas fa-phone-alt text-primary me-3"></i>
-                <span class="fw-bold">Phone:</span> <span class="ms-2">+977 9865022904</span>
-              </li>
-            </ul>
-            <!-- Metrics -->
-            <div class="mt-4">
+  <body class="index-page">
+    <header id="header" class="header d-flex flex-column justify-content-center">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+    </header>
 
-              <p class="mt-3">
-                <a href="images/cv" class="btn btn-primary py-2 px-4 shadow-sm">Download CV</a>
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section light-background">
+        <img src="assets/img/port (2).jpg" alt="" />
+
+        <div class="container" data-aos="zoom-out">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <h2>Nabin Raj Chhetri</h2>
+              <p>
+                I'm <span class="typed" data-typed-items="Developer, Backend ">Developer</span
+                ><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
               </p>
+              <div class="social-links">
+                <a href="#"><i class="bi bi-twitter-x"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="nav nav-tabs justify-content-center p-3" id="myTab" role="tablist">
+        <!-- About Tab -->
+        <a
+          class="nav-link active d-flex align-items-center"
+          id="home-tab"
+          data-bs-toggle="tab"
+          href="#home"
+          role="tab"
+          aria-controls="home"
+          aria-selected="true"
+        >
+          <i class="bi bi-person-circle me-2"></i> About
+        </a>
+
+        <!-- Projects Tab -->
+        <a
+          class="nav-link d-flex align-items-center"
+          id="profile-tab"
+          data-bs-toggle="tab"
+          href="#profile"
+          role="tab"
+          aria-controls="profile"
+          aria-selected="false"
+        >
+          <i class="bi bi-folder2 me-2"></i> Projects
+        </a>
+
+        <!-- Skills Tab -->
+        <a
+          class="nav-link d-flex align-items-center"
+          id="skills-tab"
+          data-bs-toggle="tab"
+          href="#skills"
+          role="tab"
+          aria-controls="skills"
+          aria-selected="false"
+        >
+          <i class="bi bi-tools me-2"></i> Skills
+        </a>
+
+        <!-- Contact Tab -->
+        <a
+          class="nav-link d-flex align-items-center"
+          id="contact-tab"
+          data-bs-toggle="tab"
+          href="#contact"
+          role="tab"
+          aria-controls="contact"
+          aria-selected="false"
+        >
+          <i class="bi bi-envelope me-2"></i> Contact
+        </a>
+      </nav>
+
+      <!-- Tab Content -->
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class="container py-5">
+            <div class="row align-items-center">
+              <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <p>
+                  Hello! I'm Nabin Raj Chhetri, a passionate developer with a strong background in backend development.
+                  I have experience working with various technologies including Laravel, Node.js, and Express.js. I
+                  enjoy creating efficient and scalable web applications and have a keen interest in learning new
+                  technologies and improving my skills. In my free time, I love exploring new places and working on
+                  personal projects.
+                </p>
+              </div>
+              <div class="col-lg-6" data-aos="fade-left">
+                <div class="about-content">
+                  <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Nepal</p>
+                  <p>
+                    <i class="fas fa-graduation-cap"></i> <strong>Course:</strong> BCA (Bachelor of Computer
+                    Application)
+                  </p>
+                  <p><i class="fas fa-envelope"></i> <strong>Email:</strong> nabin.raj.chhetri@gmail.com</p>
+                  <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +977-9865022904</p>
+                  <p><i class="fas fa-briefcase"></i> <strong>Experience:</strong> 2 years in Backend Development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <h3 class="text-customtext mb-4"><i class="bi bi-folder"></i> Projects</h3>
+          <div class="row">
+            <div class="col-md-12 mb-4">
+              <i class="bi bi-check-circle text-success me-2"></i>Laravel E-Commerce Projects
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="project-item p-3 border rounded shadow-sm" data-aos="fade-up">
+                    <div class="project-details">
+                      <div class="mb-3">
+                        <h6 class="text-customtext">Sierra E-Commerce Platform</h6>
+                        <p class="mb-2"><strong>Laravel</strong> and <strong>Bootstrap</strong>.</p>
+                        <a href="https://sierra.com.np/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                          >View Project</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="project-item p-3 border rounded shadow-sm" data-aos="fade-up">
+                    <div class="project-details">
+                      <!-- Project 2 -->
+                      <div class="mb-3">
+                        <h6 class="text-customtext">Mobile & Solution</h6>
+                        <p class="mb-2"><strong>Laravel</strong> and <strong>Bootstrap</strong>.</p>
+                        <a href="https://mobileandsolution.com/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                          >View Project</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 mb-4">
+              <i class="bi bi-check-circle text-success me-2"></i>Laravel Portfolio Site
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="project-item p-3 border rounded shadow-sm" data-aos="fade-up">
+                    <div class="project-details">
+                      <div class="mb-3">
+                        <h6 class="text-customtext">Consultancy Portfolio</h6>
+                        <p><strong>Backend</strong>, <strong>Laravel</strong> and <strong>Bootstrap 5</strong>.</p>
+                        <a href="https://fusion.edu.np/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                          >View Project</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="project-item p-3 border rounded shadow-sm" data-aos="fade-up">
+                    <div class="project-details">
+                      <!-- Project 2 -->
+                      <div class="mb-3">
+                        <h6 class="text-customtext">King Fisher Tourism Site</h6>
+                        <p class="mb-2">
+                          <strong> FullStack</strong> <strong>Laravel</strong> and <strong>Bootstrap</strong>.
+                        </p>
+                        <a href="https://kingfishertourism.com/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                          >View Project</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 mb-4">
+              <i class="bi bi-check-circle text-success me-2"></i>Laravel Inventory
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="project-item p-3 border rounded shadow-sm" data-aos="fade-up">
+                    <div class="project-details">
+                      <div class="mb-3">
+                        <h6 class="text-customtext">Stock Management</h6>
+                        <p><strong>Fullstack</strong>, <strong>Laravel</strong> and <strong>Bootstrap 5</strong>.</p>
+                        <a href="https://fusion.edu.np/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                          >View Project</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12 mb-4">
+              <i class="bi bi-check-circle text-success me-2"></i>Node Js
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="project-item p-3 border rounded shadow-sm" data-aos="fade-up">
+                    <div class="project-details">
+                      <div class="mb-3">
+                        <h6 class="text-customtext">LinkUp Online Chat</h6>
+                        <p><strong>FullStack</strong>, <strong>Express Js</strong> and <strong>Html</strong>.</p>
+                        <a href="https://nbnp.netlify.app/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                          >View Project</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="project-item p-3 border rounded shadow-sm" data-aos="fade-up">
+                    <div class="project-details">
+                      <div class="mb-3">
+                        <h6 class="text-customtext">Sauraha Gourment</h6>
+                        <p><strong>FullStack</strong>, <strong>Express Js</strong> and <strong>React Js</strong>.</p>
+                        <a
+                          href="https://saurahagourmet.netlify.app/"
+                          class="btn btn-sm btn-info btn-custom"
+                          target="_blank"
+                          >View Project</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
+          <h3 class="text-customtext mb-4"><i class="bi bi-star"></i> Skills</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle text-success me-2"></i> HTML5</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i> CSS3</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i> JavaScript</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i> Bootstrap 5</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i> React.js</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle text-success me-2"></i> Node.js</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i> Laravel</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i> MySQL</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i> MongoDB</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i> Git & GitLab</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle text-success me-2"></i> Plesk</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i> CPanel</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i> Render</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+          <div class="container p-3" data-aos="fade" data-aos-delay="100">
+            <h5>Contact Me</h5>
+            <div class="row gy-4">
+              <div class="col-lg-12">
+                <form
+                  action="forms/contact.php"
+                  method="post"
+                  class="php-email-form"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div class="row gy-4">
+                    <div class="col-md-6">
+                      <input type="text" name="name" class="form-control" placeholder="Your Name" required="" />
+                    </div>
+
+                    <div class="col-md-6">
+                      <input type="email" class="form-control" name="email" placeholder="Your Email" required="" />
+                    </div>
+
+                    <div class="col-md-12">
+                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="" />
+                    </div>
+
+                    <div class="col-md-12">
+                      <textarea
+                        class="form-control"
+                        name="message"
+                        rows="6"
+                        placeholder="Message"
+                        required=""
+                      ></textarea>
+                    </div>
+
+                    <div class="col-md-12 text-center">
+                      <div class="loading">Loading</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                      <button type="submit">Send Message</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </main>
 
-
-
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <div class="row text-center mt-5">
-        <h1 class="display-3 fw-bold text-capitalize">Latest work</h1>
-        <div class="heading-line"></div>
-        <p class="lead">
-          Explore some of my recent projects showcasing my skills in web development, design, and innovative solutions.
-        </p>
-      </div>
-
-      <!-- FILTER BUTTONS  -->
-      <div class="row mt-5 mb-4 g-3 text-center">
-        <!-- Buttons will be inserted dynamically -->
-        <ul>
-          <li id="filter-buttons" class=""></li>
-        </ul>
-      </div>
-
-      <!-- START THE PORTFOLIO ITEMS  -->
-      <div class="row" id="portfolio-items">
-        <!-- Portfolio items will be inserted dynamically -->
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <!-- CONTENT FOR THE MOBILE NUMBER  -->
-        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
-          <div class="contact-box__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" viewBox="0 0 24 24"
-              stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-              <path d="M15 7a2 2 0 0 1 2 2" />
-              <path d="M15 3a6 6 0 0 1 6 6" />
-            </svg>
-          </div>
-          <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">+977 9865022904</a>
-            <p class="contact-box__info--subtitle"> Mon-Fri 9am-6pm</p>
-          </div>
-        </div>
-        <!-- CONTENT FOR EMAIL  -->
-        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
-          <div class="contact-box__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-opened" viewBox="0 0 24 24"
-              stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <polyline points="3 9 12 15 21 9 12 3 3 9" />
-              <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
-              <line x1="3" y1="19" x2="9" y2="13" />
-              <line x1="15" y1="13" x2="21" y2="19" />
-            </svg>
-          </div>
-          <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">nabin.raj.chhetri@com</a>
-            <p class="contact-box__info--subtitle">Online support</p>
-          </div>
-        </div>
-        <!-- CONTENT FOR LOCATION  -->
-        <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
-          <div class="contact-box__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" viewBox="0 0 24 24"
-              stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <line x1="18" y1="6" x2="18" y2="6.01" />
-              <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
-              <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
-              <line x1="9" y1="4" x2="9" y2="17" />
-              <line x1="15" y1="15" x2="15" y2="20" />
-            </svg>
-          </div>
-          <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">Ratnanagar-1 Bakulahar Chitwan</a>
-            <p class="contact-box__info--subtitle">=442880, </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- START THE SOCIAL MEDIA CONTENT  -->
-    <div class="footer-sm" style="background-color: #212121;">
+    <footer id="footer" class="footer position-relative light-background">
       <div class="container">
-        <div class="row py-4 text-center text-white">
-          <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
-            connect with us on social media
+        <h3 class="sitename">Nabin Raj Chhetri</h3>
+
+        <div class="about-me">
+          <h4>About Me</h4>
+          <p>
+            Hello! I'm Nabin Raj Chhetri, a passionate developer with a strong background in backend development. I have
+            experience working with various technologies including Laravel, Node.js, and Express.js. I enjoy creating
+            efficient and scalable web applications and have a keen interest in learning new technologies and improving
+            my skills. In my free time, I love exploring new places and working on personal projects.
+          </p>
+        </div>
+        <div class="social-links d-flex justify-content-center">
+          <a href=""><i class="bi bi-twitter-x"></i></a>
+          <a href=""><i class="bi bi-facebook"></i></a>
+          <a href=""><i class="bi bi-instagram"></i></a>
+          <a href=""><i class="bi bi-skype"></i></a>
+          <a href=""><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <span>Copyright</span> <strong class="px-1 sitename">Nabin Raj chhetri</strong>
+            <span>All Rights Reserved</span>
           </div>
-          <div class="col-lg-7 col-md-6">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-          </div>
+          <!-- <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div> -->
         </div>
       </div>
-    </div>
+    </footer>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
+    <div id="preloader"></div>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-
-
-  </footer>
-
-  <!-- BACK TO TOP BUTTON  -->
-  <a href="#" class="shadow btn-primary rounded-circle back-to-top">
-    <i class="fas fa-chevron-up"></i>
-  </a>
-
-  <script src="assets/vendors/js/glightbox.min.js"></script>
-
-
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const filterButtonsContainer = document.getElementById('filter-buttons');
-      const portfolioItemsContainer = document.getElementById('portfolio-items');
-
-      // Example data with links
-      const filters = ['All', 'Company', 'Travel', 'Ecommerce', 'Consultancy', 'Portfolio'];
-      const portfolioItems = [
-        { id: 1, image: 'images/portfolio/portfolio-1.jpg', title: 'Taskx', category: 'Company', link: 'https://example.com/taskx' },
-        { id: 2, image: 'images/portfolio/king-fisher-travel.JPG', title: 'Kingfisher', category: 'Travel', link: 'https://kingfishertourism.com/' },
-        { id: 3, image: 'images/portfolio/unity-group.jpg', title: 'Unity Group', category: 'Consultancy', link: 'https://unitygroup.edu.np/' },
-        { id: 4, image: 'images/portfolio/fusion-dot.JPG', title: 'Fusion Dot', category: 'Consultancy', link: 'https://fusion.edu.np/' },
-        { id: 6, image: 'images/portfolio/sierra-ecommerce.JPG', title: 'Sierra', category: 'Ecommerce', link: 'https://sierra.com.np/' },
-        { id: 7, image: 'images/portfolio/themobile-solution.JPG', title: 'TheMobilesolution', category: 'Ecommerce', link: 'https://mobileandsolution.com/' },
-        { id: 8, image: 'images/portfolio/portfolio-2.jpg', title: 'Seed Nepal', category: 'Portfolio', link: 'https://example.com/seed-nepal' },
-      ];
-
-      // Create filter buttons
-      filters.forEach(filter => {
-        const button = document.createElement('button');
-        button.className = 'btn btn-outline-primary';
-        button.textContent = filter;
-        button.addEventListener('click', () => filterPortfolio(filter));
-        filterButtonsContainer.appendChild(button);
-      });
-
-      // Create portfolio items
-      function renderPortfolioItems(items) {
-        portfolioItemsContainer.innerHTML = ''; // Clear existing items
-        items.forEach(item => {
-          const col = document.createElement('div');
-          col.className = 'col-lg-4 col-md-6';
-
-          const link = document.createElement('a');
-          link.href = item.link;
-          link.target = '_blank'; // Opens the link in a new tab
-          link.className = 'text-decoration-none';
-
-          const box = document.createElement('div');
-          box.className = 'portfolio-box shadow';
-
-          const img = document.createElement('img');
-          img.src = item.image;
-          img.alt = `${item.title} image`;
-          img.title = `${item.title} picture`;
-          img.className = 'img-fluid';
-
-          const info = document.createElement('div');
-          info.className = 'portfolio-info';
-
-          const caption = document.createElement('div');
-          caption.className = 'caption';
-
-          const title = document.createElement('h4');
-          title.textContent = item.title;
-
-          const category = document.createElement('p');
-          category.textContent = item.category;
-
-          caption.appendChild(title);
-          caption.appendChild(category);
-          info.appendChild(caption);
-          box.appendChild(img);
-          box.appendChild(info);
-          link.appendChild(box); // Wrap the box in the link
-          col.appendChild(link);
-
-          portfolioItemsContainer.appendChild(col);
-        });
-      }
-
-      // Filter portfolio items
-      function filterPortfolio(category) {
-        if (category === 'All') {
-          renderPortfolioItems(portfolioItems);
-        } else {
-          const filteredItems = portfolioItems.filter(item => item.category === category);
-          renderPortfolioItems(filteredItems);
-        }
-      }
-
-      // Initial render
-      renderPortfolioItems(portfolioItems);
-    });
-
-  </script>
-
-
-
-
-
-</body>
-
-<style>
-  @media (min-width: 425px) {
-    .intro-section {
-      padding: 1rem;
-    }
-  }
-
-  @media (min-width: 1080px) {
-    .intro-section {
-      padding: 10rem 0 0 0;
-    }
-  }
-</style>
-
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
