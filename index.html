@@ -103,38 +103,62 @@
     <header id="header" class="header d-flex flex-column justify-content-center">
       <i class="header-toggle d-xl-none bi bi-list"></i>
     </header>
+    <header id="header" class="header d-flex flex-column justify-content-center">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
 
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a>
+          </li>
+          <li>
+            <a href="#about" class=""><i class="bi bi-person navicon"></i><span>About</span></a>
+          </li>
+          <li>
+            <a href="#resume" class=""><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a>
+          </li>
+          <li>
+            <a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a>
+          </li>
+          <li>
+            <a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a>
+          </li>
+          <li>
+            <a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main class="main">
-      <!-- Hero Section -->
       <section id="hero" class="hero section light-background">
         <img src="assets/img/port (2).jpg" alt="" />
 
         <div class="container" data-aos="zoom-out">
           <div class="row justify-content-center">
-            <div class="col-lg-9">
-              <h2>Nabin Raj Chhetri</h2>
-              <p>
-                I'm <span class="typed" data-typed-items="Developer, Backend ">Developer</span
-                ><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+            <div class="col-lg-9 text-center">
+              <h1 class="display-4">Nabin Raj Chhetri</h1>
+              <p class="lead">
+                I'm a <span class="typed" data-typed-items="Developer, Backend Developer">Developer</span>
+                <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
               </p>
-              <div class="social-links">
-                <a href="https://x.com/NabinXettri3"><i class="bi bi-twitter-x"></i></a>
-                <a href="https://www.facebook.com/nabin.raj.chhetri/"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/nabin-raj-xettri-032667154/"><i class="bi bi-linkedin"></i></a>
+              <div class="social-links my-3">
+                <a href="https://x.com/NabinXettri3" class="mx-2"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/nabin.raj.chhetri/" class="mx-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/nabin-raj-xettri-032667154/" class="mx-2"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
               </div>
-
-                <div class="d-flex justify-content-center mt-4"></div>
+              <div class="mt-4">
                 <a href="#" class="btn btn-custom mx-2">Home</a>
                 <a href="/blogs.html" class="btn btn-custom mx-2">Blogs</a>
-                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <nav class="nav nav-tabs justify-content-center p-3" id="myTab" role="tablist">
-        <!-- About Tab -->
         <a
           class="nav-link active d-flex align-items-center"
           id="home-tab"
@@ -144,10 +168,8 @@
           aria-controls="home"
           aria-selected="true"
         >
-          <i class="bi bi-person-circle me-2"></i> About
+          About
         </a>
-
-        <!-- Projects Tab -->
         <a
           class="nav-link d-flex align-items-center"
           id="profile-tab"
@@ -157,10 +179,8 @@
           aria-controls="profile"
           aria-selected="false"
         >
-          <i class="bi bi-folder2 me-2"></i> Projects
+          Projects
         </a>
-
-        <!-- Skills Tab -->
         <a
           class="nav-link d-flex align-items-center"
           id="skills-tab"
@@ -170,10 +190,8 @@
           aria-controls="skills"
           aria-selected="false"
         >
-          <i class="bi bi-tools me-2"></i> Skills
+          Skills
         </a>
-
-        <!-- Contact Tab -->
         <a
           class="nav-link d-flex align-items-center"
           id="contact-tab"
@@ -183,7 +201,7 @@
           aria-controls="contact"
           aria-selected="false"
         >
-          <i class="bi bi-envelope me-2"></i> Contact
+          Contact
         </a>
       </nav>
 
@@ -229,7 +247,13 @@
                       <div class="mb-3">
                         <h6 class="text-customtext">Sierra E-Commerce Platform</h6>
                         <p class="mb-2"><strong>Laravel</strong> and <strong>Bootstrap</strong>.</p>
-                        <a href="https://sierra.com.np/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                        <a
+                          href="https://sierra.com.np/"
+                          class="btn btn-sm btn-info btn-custom"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           >View Project</a
                         >
                       </div>
@@ -243,7 +267,11 @@
                       <div class="mb-3">
                         <h6 class="text-customtext">Mobile & Solution</h6>
                         <p class="mb-2"><strong>Laravel</strong> and <strong>Bootstrap</strong>.</p>
-                        <a href="https://mobileandsolution.com/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                        <a
+                          href="https://mobileandsolution.com/"
+                          class="btn btn-sm btn-info btn-custom"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           >View Project</a
                         >
                       </div>
@@ -262,7 +290,11 @@
                       <div class="mb-3">
                         <h6 class="text-customtext">Consultancy Portfolio</h6>
                         <p><strong>Backend</strong>, <strong>Laravel</strong> and <strong>Bootstrap 5</strong>.</p>
-                        <a href="https://fusion.edu.np/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                        <a
+                          href="https://fusion.edu.np/"
+                          class="btn btn-sm btn-info btn-custom"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           >View Project</a
                         >
                       </div>
@@ -278,7 +310,11 @@
                         <p class="mb-2">
                           <strong> FullStack</strong> <strong>Laravel</strong> and <strong>Bootstrap</strong>.
                         </p>
-                        <a href="https://kingfishertourism.com/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                        <a
+                          href="https://kingfishertourism.com/"
+                          class="btn btn-sm btn-info btn-custom"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           >View Project</a
                         >
                       </div>
@@ -297,7 +333,11 @@
                       <div class="mb-3">
                         <h6 class="text-customtext">Stock Management</h6>
                         <p><strong>Fullstack</strong>, <strong>Laravel</strong> and <strong>Bootstrap 5</strong>.</p>
-                        <a href="https://fusion.edu.np/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                        <a
+                          href="https://fusion.edu.np/"
+                          class="btn btn-sm btn-info btn-custom"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           >View Project</a
                         >
                       </div>
@@ -316,7 +356,11 @@
                       <div class="mb-3">
                         <h6 class="text-customtext">LinkUp Online Chat</h6>
                         <p><strong>FullStack</strong>, <strong>Express Js</strong> and <strong>Html</strong>.</p>
-                        <a href="https://nbnp.netlify.app/" class="btn btn-sm btn-info btn-custom" target="_blank"
+                        <a
+                          href="https://nbnp.netlify.app/"
+                          class="btn btn-sm btn-info btn-custom"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           >View Project</a
                         >
                       </div>
@@ -442,15 +486,15 @@
           </p>
         </div>
         <div class="social-links d-flex justify-content-center">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-skype"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
+          <a href="https://x.com/NabinXettri3"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.facebook.com/nabin.raj.chhetri/"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-skype"></i></a>
+          <a href="https://www.linkedin.com/in/nabin-raj-xettri-032667154/"><i class="bi bi-linkedin"></i></a>
         </div>
         <div class="container">
           <div class="copyright">
-            <span>Copyright</span> <strong class="px-1 sitename">Nabin Raj chhetri</strong>
+            <span>Copyright</span> <strong class="px-1 sitename">Nabin Raj Chhetri</strong>
             <span>All Rights Reserved</span>
           </div>
           <!-- <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div> -->
