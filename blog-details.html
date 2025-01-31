@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Blog Details</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
+    <!-- Favicons -->
+    <link href="assets/img/port (2).jpg" rel="icon" />
+    <link href="assets/img/port (2).jpg" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Detailed blog post by Nabin Chhetri. Read more about various topics and insights."
+    />
+    <meta name="author" content="Nabin Chhetri" />
+    <meta name="keywords" content="Nabin Chhetri, blog, detailed blog, insights, articles" />
+    <meta property="og:title" content="Blog Details by Nabin Chhetri" />
+    <meta
+      property="og:description"
+      content="Detailed blog post by Nabin Chhetri. Read more about various topics and insights."
+    />
+    <meta property="og:image" content="assets/img/port (2).jpg" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://yourwebsite.com/blog-details" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+      .blog-banner {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .blog-image {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      .blog-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .blog-meta {
+        font-size: 14px;
+        color: #777;
+      }
+
+      .blog-content {
+        font-size: 18px;
+        color: #555;
+        margin-top: 15px;
+        line-height: 1.6;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+      .blog-container {
+        max-width: 800px;
+        margin: 40px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      .blog-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .blog-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 15px;
+        color: #333;
+      }
+      .blog-meta {
+        font-size: 14px;
+        color: #888;
+      }
+      .blog-content {
+        font-size: 18px;
+        color: #555;
+        margin-top: 15px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" class="header d-flex flex-column justify-content-center">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li>
+            <a href="/" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a>
+          </li>
+          <li>
+            <a href="#about" class=""><i class="bi bi-person navicon"></i><span>About</span></a>
+          </li>
+          <li>
+            <a href="#resume" class=""><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a>
+          </li>
+          <li>
+            <a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a>
+          </li>
+          <li>
+            <a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a>
+          </li>
+          <li>
+            <a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <!-- ✅ Blog Banner (Featured Image) -->
+      <img id="blog-banner" src="" alt="Blog Banner" class="blog-banner img-fluid" />
+
+      <nav class="breadcrumb">
+        <a class="breadcrumb-item" href="#">Home</a>
+        <a class="breadcrumb-item" href="/blog">Blog</a>
+        <span class="breadcrumb-item active" id="blog-slug" aria-current="page">Active</span>
+      </nav>
+
+      <div class="blog-container">
+        <!-- ✅ Blog Image (Inside the blog content) -->
+        <img id="blog-image" src="" alt="Blog Image" class="blog-image" />
+
+        <h1 id="blog-title" class="blog-title"></h1>
+        <p id="blog-meta" class="blog-meta"></p>
+        <div id="blog-content" class="blog-content"></div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        let urlParams = new URLSearchParams(window.location.search);
+        let slug = urlParams.get("slug");
+
+        if (!slug) {
+          $("body").html("<p class='text-danger text-center'>Blog not found!</p>");
+          return;
+        }
+
+        console.log("Fetching blog for slug:", slug); // Debug log
+
+        // Fetch blog by slug
+        $.ajax({
+          url: `https://merochiya.com/api/blog/${slug}`,
+          method: "GET",
+          dataType: "json",
+          success: function (response) {
+            if (!response.status || !response.data) {
+              $("body").html("<p class='text-danger text-center'>Blog not found!</p>");
+              return;
+            }
+
+            let blog = response.data;
+            console.log("Blog fetched:", blog); // Debug log
+
+            $("#blog-image").attr("src", blog.image);
+            $("#blog-banner").attr("src", blog.banner);
+            $("#blog-title").text(blog.name);
+            $("#blog-slug").text(blog.slug);
+            $("#blog-meta").text(
+              `Published on: ${new Date(blog.created_at).toDateString()} | Views: ${blog.post_view}`
+            );
+            $("#blog-content").html(blog.description);
+          },
+          error: function (xhr, status, error) {
+            console.log("AJAX Error:", xhr.responseText); // Debug error
+            $("body").html("<p class='text-danger text-center'>Failed to load blog details.</p>");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
