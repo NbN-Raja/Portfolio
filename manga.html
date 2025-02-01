@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MangaDex API Fetch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900">
+    <!-- ✅ Header -->
+    <div class="text-center mt-10">
+      <h1 class="text-3xl font-bold">📚 Latest Manga</h1>
+    </div>
+
+    <!-- ✅ Manga List -->
+    <div id="manga-list" class="container mx-auto mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+      <!-- Manga will be dynamically added here -->
+    </div>
+
+    <!-- ✅ Manga Chapters Section -->
+    <div id="chapter-section" class="container mx-auto mt-10 hidden">
+      <h2 class="text-2xl font-bold text-center">📖 Latest Chapters</h2>
+      <div id="chapter-list" class="mt-4 p-4 bg-white shadow-md rounded-lg"></div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const proxyUrl = "https://api.allorigins.win/raw?url="; // Bypass CORS
+        const mangaApiUrl = "https://api.mangadex.org/manga?limit=6"; // Fetch latest manga
+
+        // ✅ Fetch Manga List
+        fetch(proxyUrl + encodeURIComponent(mangaApiUrl))
+          .then((response) => response.json())
+          .then((data) => {
+            let mangaList = document.getElementById("manga-list");
+            mangaList.innerHTML = "";
+
+            data.data.forEach((manga) => {
+              let mangaId = manga.id;
+              let title = manga.attributes.title.en || "Unknown Title";
+              let description = manga.attributes.description.en
+                ? manga.attributes.description.en.substring(0, 100) + "..."
+                : "No description available.";
+
+              let coverFileName = manga.relationships.find((rel) => rel.type === "cover_art")?.attributes?.fileName;
+              let coverUrl = coverFileName
+                ? `https://uploads.mangadex.org/covers/${mangaId}/${coverFileName}`
+                : "https://via.placeholder.com/200x300?text=No+Image";
+
+              // ✅ Create Manga Card with Click Event
+              let mangaCard = document.createElement("div");
+              mangaCard.className =
+                "bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition cursor-pointer";
+              mangaCard.innerHTML = `
+                            <img src="${coverUrl}" alt="${title}" class="w-full h-64 object-cover">
+                            <div class="p-4">
+                                <h2 class="text-lg font-semibold">${title}</h2>
+                                <p class="text-sm text-gray-600">${description}</p>
+                                <a href="https://mangadex.org/title/${mangaId}" target="_blank" class="block mt-3 text-blue-500 font-semibold hover:text-blue-600">Read More →</a>
+                            </div>
+                        `;
+
+              // ✅ Add Click Event to Fetch Chapters
+              mangaCard.addEventListener("click", () => fetchChapters(mangaId, title));
+
+              mangaList.appendChild(mangaCard);
+            });
+          })
+          .catch((error) => console.error("Error fetching manga:", error));
+
+        // ✅ Fetch Chapters for a Manga
+        function fetchChapters(mangaId, mangaTitle) {
+          const chapterApiUrl = `https://api.mangadex.org/manga/${mangaId}/feed?limit=5&translatedLanguage[]=en`;
+
+          fetch(proxyUrl + encodeURIComponent(chapterApiUrl))
+            .then((response) => response.json())
+            .then((data) => {
+              let chapterList = document.getElementById("chapter-list");
+              let chapterSection = document.getElementById("chapter-section");
+
+              chapterList.innerHTML = `<h3 class="text-xl font-semibold mb-4">${mangaTitle} - Latest Chapters</h3>`;
+
+              data.data.forEach((chapter) => {
+                let chapterTitle = chapter.attributes.title || `Chapter ${chapter.attributes.chapter}`;
+                let chapterId = chapter.id;
+
+                let chapterItem = document.createElement("div");
+                chapterItem.className = "p-2 border-b hover:bg-gray-100 transition";
+                chapterItem.innerHTML = `
+                                <a href="https://mangadex.org/chapter/${chapterId}" target="_blank" class="text-blue-500 font-semibold hover:text-blue-600">
+                                    📖 ${chapterTitle}
+                                </a>
+                            `;
+
+                chapterList.appendChild(chapterItem);
+              });
+
+              chapterSection.classList.remove("hidden"); // Show Chapter Section
+            })
+            .catch((error) => console.error("Error fetching chapters:", error));
+        }
+      });
+    </script>
+  </body>
+</html>
