@@ -35,88 +35,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+    />
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="assets/css/main.css" rel="stylesheet" />
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <style>
-      .blog-banner {
-        width: 100%;
-        height: 350px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 20px;
-      }
-
-      .blog-image {
-        width: 100%;
-        height: auto;
-        max-height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 15px;
-      }
-
-      .blog-title {
-        font-size: 28px;
-        font-weight: bold;
-        color: #333;
-      }
-
-      .blog-meta {
-        font-size: 14px;
-        color: #777;
-      }
-
-      .blog-content {
-        font-size: 18px;
-        color: #555;
-        margin-top: 15px;
-        line-height: 1.6;
-      }
-
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
-      }
-      .blog-container {
-        max-width: 800px;
-        margin: 40px auto;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      }
-      .blog-image {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-      .blog-title {
-        font-size: 28px;
-        font-weight: bold;
-        margin-top: 15px;
-        color: #333;
-      }
-      .blog-meta {
-        font-size: 14px;
-        color: #888;
-      }
-      .blog-content {
-        font-size: 18px;
-        color: #555;
-        margin-top: 15px;
-        line-height: 1.6;
-      }
-    </style>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGF2WF62EY"></script>
@@ -129,52 +55,95 @@
 
     gtag("config", "G-EGF2WF62EY");
   </script>
-  <body>
-    <header id="header" class="header d-flex flex-column justify-content-center">
-      <i class="header-toggle d-xl-none bi bi-list"></i>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li>
-            <a href="/" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a>
-          </li>
-          <li>
-            <a href="#about" class=""><i class="bi bi-person navicon"></i><span>About</span></a>
-          </li>
-          <li>
-            <a href="#resume" class=""><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a>
-          </li>
-          <li>
-            <a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a>
-          </li>
-          <li>
-            <a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a>
-          </li>
-          <li>
-            <a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a>
-          </li>
-        </ul>
+  <body class="bg-gray-100 text-gray-900">
+    <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto flex items-center justify-between p-4">
+        <a href="/" class="text-2xl font-bold text-gray-800">Nabin's Blog</a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-6">
+          <a href="/" class="text-gray-700 hover:text-blue-500">🏠 Home</a>
+          <a href="/blogs.html" class="text-gray-700 hover:text-blue-500">📝 Blog</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <i id="nav-toggle" class="text-2xl cursor-pointer md:hidden bi bi-list"></i>
+      </div>
+
+      <!-- Mobile Menu (Hidden by default) -->
+      <div id="mobile-menu" class="hidden bg-white md:hidden flex flex-col items-center space-y-4 py-4 shadow-md">
+        <a href="/" class="text-gray-700 hover:text-blue-500">🏠 Home</a>
+        <a href="/blog" class="text-gray-700 hover:text-blue-500">📝 Blog</a>
+      </div>
+    </nav>
+
+    <div class="container mx-auto flex flex-col items-center justify-center mt-20 bg-white p-6 rounded-lg shadow-lg">
+      <div class="w-20 h-20 bg-gray-300 rounded-full overflow-hidden">
+        <img
+          src="https://scontent.fktm17-1.fna.fbcdn.net/v/t39.30808-6/474557024_1317787036080635_4359964698648288199_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_eui2=AeGu2IEzcRw_u-0TtyAxhpbdtr0m0KmDVTi2vSbQqYNVOEbGrVy-6V2zrjlor0KOhcNCdKBlHT4NxE2m0frLUgFW&_nc_ohc=iukaYdXMs2UQ7kNvgFMBnal&_nc_oc=AdgjxVD_kpzIzyD9qlSJ5mFkYbdZQLQgOJV-0Q_BXBWy0Q-UsleygPjjCWqDMVPsIoU&_nc_zt=23&_nc_ht=scontent.fktm17-1.fna&_nc_gid=Ay7KwxtT-iJJjCOD-ANb_nQ&oh=00_AYC_m256PJiaJbWzLr4n_FMKzkFOub0MA5LeMi3-fXMCLQ&oe=67A3BC91"
+          alt="Nabin's Avatar"
+          class="w-full h-full object-cover rounded-full"
+        />
+      </div>
+      <div class="text-lg font-semibold mt-4 text-gray-800">Hello, I'm Nabin. Welcome to my blog! 🚀</div>
+    </div>
+    <!-- Blog Container -->
+    <div class="container mx-auto mt-20 px-4">
+      <!-- Blog Banner -->
+      <div class="relative w-full rounded-lg overflow-hidden shadow-lg group">
+        <!-- Background Image -->
+        <img
+          id="blog-banner"
+          src=""
+          alt="Blog Banner"
+          class="w-full h-72 md:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+
+        <!-- Overlay (Gradient for Readability) -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80"></div>
+
+        <!-- Blog Title & Meta -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-6">
+          <h1 id="blog-title" class="text-3xl md:text-5xl font-bold drop-shadow-lg">Loading...</h1>
+          <p id="blog-meta" class="text-sm md:text-lg text-gray-200 mt-2 drop-shadow-md">
+            Published on: ... | Views: ...
+          </p>
+        </div>
+      </div>
+
+      <!-- Breadcrumb -->
+      <nav class="mt-6 text-gray-500 text-sm">
+        <a href="/" class="hover:text-blue-500">Home</a> / <a href="/blog" class="hover:text-blue-500">Blog</a> /
+        <span id="blog-slug" class="text-gray-800 font-semibold">Loading...</span>
       </nav>
-    </header>
-    <div class="container">
-      <!-- ✅ Blog Banner (Featured Image) -->
-      <img id="blog-banner" src="" alt="Blog Banner" class="blog-banner img-fluid" />
 
-      <nav class="breadcrumb">
-        <a class="breadcrumb-item" href="#">Home</a>
-        <a class="breadcrumb-item" href="/blog">Blog</a>
-        <span class="breadcrumb-item active" id="blog-slug" aria-current="page">Active</span>
-      </nav>
+      <!-- Blog Content -->
+      <div class="container mx-auto mt-10 px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Left Column: Blog Content -->
+        <div class="md:col-span-2 bg-white p-6 rounded-lg shadow-md">
+          <h1 id="blog-title" class="text-3xl font-bold text-gray-800"></h1>
+          <p id="blog-meta" class="text-gray-500 mt-2"></p>
 
-      <div class="blog-container">
-        <!-- ✅ Blog Image (Inside the blog content) -->
-        <img id="blog-image" src="" alt="Blog Image" class="blog-image" />
+          <img id="blog-image" src="" alt="Blog Image" class="w-full h-80 object-cover rounded-lg mt-4" />
 
-        <h1 id="blog-title" class="blog-title"></h1>
-        <p id="blog-meta" class="blog-meta"></p>
-        <div id="blog-content" class="blog-content"></div>
+          <div id="blog-content" class="mt-6 text-gray-700 leading-7"></div>
+        </div>
+
+        <!-- Right Column: Related Blogs -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">📢 Related Blogs</h2>
+          <div id="related-blogs" class="space-y-4">
+            <!-- Related blogs will be added here dynamically -->
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" id="scroll-top" class="fixed bottom-6 right-6 bg-gray-800 text-white p-3 rounded-full shadow-md hidden">
+      <i class="bi bi-arrow-up-short text-2xl"></i>
+    </a>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -184,40 +153,87 @@
         let slug = urlParams.get("slug");
 
         if (!slug) {
-          $("body").html("<p class='text-danger text-center'>Blog not found!</p>");
+          $("body").html("<p class='text-red-500 text-center mt-10'>Blog not found!</p>");
           return;
         }
 
-        console.log("Fetching blog for slug:", slug); // Debug log
+        console.log("Fetching blog for slug:", slug);
 
-        // Fetch blog by slug
+        // Fetch main blog content
         $.ajax({
           url: `https://merochiya.com/api/blog/${slug}`,
           method: "GET",
           dataType: "json",
           success: function (response) {
             if (!response.status || !response.data) {
-              $("body").html("<p class='text-danger text-center'>Blog not found!</p>");
+              $("body").html("<p class='text-red-500 text-center mt-10'>Blog not found!</p>");
               return;
             }
 
             let blog = response.data;
-            console.log("Blog fetched:", blog); // Debug log
+            console.log("Blog fetched:", blog);
 
             $("#blog-image").attr("src", blog.image);
             $("#blog-banner").attr("src", blog.banner);
             $("#blog-title").text(blog.name);
-            $("#blog-slug").text(blog.slug);
             $("#blog-meta").text(
               `Published on: ${new Date(blog.created_at).toDateString()} | Views: ${blog.post_view}`
             );
             $("#blog-content").html(blog.description);
+
+            // Fetch related blogs
+            fetchRelatedBlogs(slug);
           },
           error: function (xhr, status, error) {
-            console.log("AJAX Error:", xhr.responseText); // Debug error
-            $("body").html("<p class='text-danger text-center'>Failed to load blog details.</p>");
+            console.log("AJAX Error:", xhr.responseText);
+            $("body").html("<p class='text-red-500 text-center mt-10'>Failed to load blog details.</p>");
           },
         });
+
+        // Function to fetch related blogs
+        function fetchRelatedBlogs(currentSlug) {
+          $.ajax({
+            url: "https://merochiya.com/api/blogs",
+            method: "GET",
+            dataType: "json",
+            success: function (response) {
+              let blogs = response.data || [];
+              let relatedHtml = "";
+
+              blogs.forEach(function (blog) {
+                if (blog.slug !== currentSlug) {
+                  // Exclude current blog
+                  relatedHtml += `
+                                <a href="blog-details.html?slug=${
+                                  blog.slug
+                                }" class="flex items-center space-x-4 p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition">
+                                    <img src="${blog.image}" alt="${
+                    blog.name
+                  }" class="w-16 h-16 object-cover rounded-lg">
+                                    <div>
+                                        <h5 class="text-sm font-semibold text-gray-800">${blog.name}</h5>
+                                        <p class="text-xs text-gray-500">📅 ${new Date(
+                                          blog.created_at
+                                        ).toDateString()}</p>
+                                    </div>
+                                </a>
+                            `;
+                }
+              });
+
+              $("#related-blogs").html(relatedHtml);
+            },
+            error: function (error) {
+              console.log("Error fetching related blogs:", error);
+              $("#related-blogs").html("<p class='text-red-500'>Failed to load related blogs.</p>");
+            },
+          });
+        }
+      });
+
+      // Mobile Menu Toggle
+      document.getElementById("nav-toggle").addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
       });
     </script>
   </body>
