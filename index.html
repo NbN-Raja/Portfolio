@@ -83,233 +83,235 @@
         "address": { "@type": "PostalAddress", "addressLocality": "Nepal" }
       }
     </script>
+  </head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <body>
     <style>
-      .project-item {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      /* 🌟 Background Styling */
+      body {
+        font-family: "Poppins", sans-serif;
+        color: white;
+
+        /* 🌟 Background Gradient */
+        background: linear-gradient(to bottom, rgba(42, 43, 43, 0.8), rgba(201, 206, 206, 0.8)),
+          url("/assets/img/port (2).jpg");
+
+        /* 🌟 Ensures the Background Image Covers the Whole Page */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
       }
 
-      .project-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      /* 🌟 Profile Header */
+      .profile-header {
+        text-align: center;
+        padding: 50px 20px;
       }
 
-      .project-title {
-        font-size: 1.5rem;
+      .profile-name {
+        font-size: 2.5rem;
         font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
       }
 
-      .project-item h6 {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #132232;
-      }
-
-      .nav-tabs .nav-link {
-        font-size: 1.1rem;
-        font-weight: 500;
-        padding: 10px 20px;
-        transition: all 0.3s ease;
-      }
-
-      .nav-link {
-        color: #594545;
-      }
-
-      .customtext {
+      .profile-subtitle {
         font-size: 1.3rem;
-        font-weight: 600;
-        color: #594545;
-      }
-
-      .btn-custom {
-        background-color: #d9cbc4;
-        color: #594545;
-        border: none;
-        border-radius: 29px;
-        padding: 5px 19px;
-        font-size: 0.9rem;
         font-weight: 500;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        opacity: 0.8;
       }
 
-      .btn-custom:hover {
-        background-color: #594545;
-        color: #d9cbc4;
+      .profile-description {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 10px auto;
+        opacity: 0.9;
       }
 
-      .nav-tabs .nav-link i {
-        font-size: 1.2rem;
+      /* 🌟 Social Icons */
+      .social-icons a {
+        font-size: 1.8rem;
+        margin: 0 15px;
+        color: white;
+        transition: transform 0.3s ease, opacity 0.3s;
       }
 
-      .nav-tabs .nav-link:hover {
-        background-color: #d9cbc4;
-        color: #594545;
-        border-color: #d9cbc4;
+      .social-icons a:hover {
+        transform: scale(1.2);
+        opacity: 0.8;
       }
 
-      .nav-tabs .nav-link.active {
-        background-color: #d9cbc4;
-        color: #594545;
-        border-color: #d9cbc4;
+      /* 🌟 Custom Navigation Tabs */
+      .nav-tabs-custom {
+        background: white;
+        padding: 12px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        margin-top: 30px;
+      }
+
+      .nav-tabs-custom .nav-item .nav-link {
+        color: #333;
+        font-weight: 600;
+        padding: 12px 24px;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .nav-tabs-custom .nav-item .nav-link.active {
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+      }
+
+      /* 🌟 Content Styling */
+      .tab-content {
+        margin-top: 20px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        color: #333;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* 🌟 Form Styling */
+      .contact-form button {
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        color: white;
+        font-weight: 600;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: 0.3s ease-in-out;
+      }
+
+      .contact-form button:hover {
+        opacity: 0.8;
       }
     </style>
-  </head>
 
-  <body class="index-page">
-    <header id="header" class="header d-flex flex-column justify-content-center">
-      <i class="header-toggle d-xl-none bi bi-list"></i>
-    </header>
-    <header id="header" class="header d-flex flex-column justify-content-center">
-      <i class="header-toggle d-xl-none bi bi-list"></i>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li>
-            <a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a>
-          </li>
-          <li>
-            <a href="#about" class=""><i class="bi bi-person navicon"></i><span>About</span></a>
-          </li>
-          <li>
-            <a href="#resume" class=""><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a>
-          </li>
-          <li>
-            <a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a>
-          </li>
-          <li>
-            <a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a>
-          </li>
-          <li>
-            <a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main">
-      <section id="hero" class="hero section light-background">
-        <img src="assets/img/port (2).jpg" alt="Nabin Raj Chhetri" />
-
-        <div class="container" data-aos="zoom-out">
-          <div class="row justify-content-center">
-            <div class="col-lg-9 text-center">
-              <h1 class="display-4">Nabin Raj Chhetri</h1>
-              <p class="lead">
-                I'm a <span class="typed" data-typed-items="Developer, Backend Developer">Developer</span>
-                <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
-              </p>
-              <div class="social-links my-3">
-                <a href="https://x.com/NabinXettri3" class="mx-2"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.facebook.com/nabin.raj.chhetri/" class="mx-2"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/nabin-raj-xettri-032667154/" class="mx-2"
-                  ><i class="bi bi-linkedin"></i
-                ></a>
-              </div>
-              <div class="mt-4">
-                <a href="#" class="btn btn-custom btn-gray mx-2">Home</a>
-                <a
-                  href="/blogs.html"
-                  class="btn btn-custom btn-gray mx-2"
-                  onclick="gtag('event', 'click', {'event_category': 'button', 'event_label': 'Learn More'});"
-                >
-                  Blogs
-                </a>
-              </div>
-            </div>
-          </div>
+    <!-- ✅ Profile Section -->
+    <div class="container">
+      <div class="profile-header">
+        <h1 class="profile-name">Nabin Raj Chhetri</h1>
+        <p class="profile-subtitle">Laravel || NodeJs Full Stack</p>
+        <p class="profile-description">
+          I am a dedicated developer with expertise in Laravel and modern JavaScript frameworks, creating efficient and
+          scalable web applications.
+        </p>
+        <div class="social-icons">
+          <a href="https://github.com/NbN-Raja"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/nabin-raj-xettri-032667154/"><i class="fab fa-linkedin"></i></a>
         </div>
-      </section>
+      </div>
 
-      <!-- Navigation Tabs -->
-      <nav class="nav nav-tabs justify-content-center p-3 custom-tabs" id="myTab" role="tablist">
-        <a
-          class="nav-link active d-flex align-items-center"
-          id="home-tab"
-          data-bs-toggle="tab"
-          href="#home"
-          role="tab"
-          aria-controls="home"
-          aria-selected="true"
-        >
-          <i class="bi bi-house-door me-2"></i> About
-        </a>
-        <a
-          class="nav-link d-flex align-items-center"
-          id="profile-tab"
-          data-bs-toggle="tab"
-          href="#profile"
-          role="tab"
-          aria-controls="profile"
-          aria-selected="false"
-        >
-          <i class="bi bi-folder me-2"></i> Projects
-        </a>
-        <a
-          class="nav-link d-flex align-items-center"
-          id="skills-tab"
-          data-bs-toggle="tab"
-          href="#skills"
-          role="tab"
-          aria-controls="skills"
-          aria-selected="false"
-        >
-          <i class="bi bi-tools me-2"></i> Skills
-        </a>
-        <a
-          class="nav-link d-flex align-items-center"
-          id="contact-tab"
-          data-bs-toggle="tab"
-          href="#contact"
-          role="tab"
-          aria-controls="contact"
-          aria-selected="false"
-        >
-          <i class="bi bi-envelope me-2"></i> Contact
-        </a>
-      </nav>
+      <!-- ✅ Modern Navigation Tabs -->
+      <ul class="nav nav-tabs nav-tabs-custom" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="about-tab" data-bs-toggle="tab" href="#about" role="tab">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="skills-tab" data-bs-toggle="tab" href="#skills" role="tab">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="projects-tab" data-bs-toggle="tab" href="#projects" role="tab">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab">Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blogs.html" role="tab">Blogs</a>
+        </li>
+      </ul>
 
-      <!-- Tab Content -->
+      <!-- ✅ Tab Content -->
       <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-          <div class="container py-5">
-            <div class="row align-items-center">
-              <!-- Left Section: About Text -->
-              <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                <h2 class="mb-3">About Me</h2>
-                <p class="lead">
-                  Hello! I'm Nabin Raj Chhetri, a passionate developer with a strong background in backend development.
-                  I have experience working with various technologies including Laravel, Node.js, and Express.js. I
-                  enjoy creating efficient and scalable web applications and have a keen interest in learning new
-                  technologies and improving my skills. In my free time, I love exploring new places and working on
-                  personal projects.
-                </p>
-              </div>
+        <!-- 🔹 About Section -->
+        <div class="tab-pane fade show active" id="about" role="tabpanel">
+          <div class="row align-items-center">
+            <!-- Left Section: About Text -->
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+              <h2 class="mb-3">About Me</h2>
+              <p class="lead">
+                Hello! I'm Nabin Raj Chhetri, a passionate developer with a strong background in backend development. I
+                have experience working with various technologies including Laravel, Node.js, and Express.js. I enjoy
+                creating efficient and scalable web applications and have a keen interest in learning new technologies
+                and improving my skills. In my free time, I love exploring new places and working on personal projects.
+              </p>
+            </div>
 
-              <!-- Right Section: Personal Information -->
-              <div class="col-lg-6" data-aos="fade-left">
-                <div class="about-content p-4 rounded shadow-sm bg-light">
-                  <ul class="list-unstyled mb-0">
-                    <li class="mb-3"><i class="fas fa-map-marker-alt me-2"></i> <strong>Location:</strong> Nepal</li>
-                    <li class="mb-3">
-                      <i class="fas fa-graduation-cap me-2"></i> <strong>Course:</strong> BCA (Bachelor of Computer
-                      Application)
-                    </li>
-                    <li class="mb-3">
-                      <i class="fas fa-envelope me-2"></i> <strong>Email:</strong> nabin.raj.chhetri@gmail.com
-                    </li>
-                    <li class="mb-3"><i class="fas fa-phone me-2"></i> <strong>Phone:</strong> +977-9865022904</li>
-                    <li class="mb-3">
-                      <i class="fas fa-briefcase me-2"></i> <strong>Experience:</strong> 2 years in Backend Development
-                    </li>
-                  </ul>
-                </div>
+            <!-- Right Section: Personal Information -->
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="about-content p-4 rounded shadow-sm bg-light">
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-3"><i class="fas fa-map-marker-alt me-2"></i> <strong>Location:</strong> Nepal</li>
+                  <li class="mb-3">
+                    <i class="fas fa-graduation-cap me-2"></i> <strong>Course:</strong> BCA (Bachelor of Computer
+                    Application)
+                  </li>
+                  <li class="mb-3">
+                    <i class="fas fa-envelope me-2"></i> <strong>Email:</strong> nabin.raj.chhetri@gmail.com
+                  </li>
+                  <li class="mb-3"><i class="fas fa-phone me-2"></i> <strong>Phone:</strong> +977-9865022904</li>
+                  <li class="mb-3">
+                    <i class="fas fa-briefcase me-2"></i> <strong>Experience:</strong> 2 years in Backend Development
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-          <h3 class="text-customtext mb-4"><i class="bi bi-folder"></i> Projects</h3>
+        <!-- 🔹 Skills Section -->
+        <div class="tab-pane fade" id="skills" role="tabpanel">
+          <div class="row">
+            <!-- Column 1 -->
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li><i class="fab fa-html5 text-danger me-2"></i> HTML5</li>
+                <li><i class="fab fa-css3-alt text-primary me-2"></i> CSS3</li>
+                <li><i class="fab fa-js text-warning me-2"></i> JavaScript</li>
+                <li><i class="fab fa-bootstrap text-purple me-2"></i> Bootstrap 5</li>
+                <li><i class="fab fa-react text-info me-2"></i> React.js</li>
+              </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li><i class="fab fa-node-js text-success me-2"></i> Node.js</li>
+                <li><i class="fab fa-laravel text-danger me-2"></i> Laravel</li>
+                <li><i class="fas fa-database text-dark me-2"></i> MySQL</li>
+                <li><i class="fas fa-leaf text-green me-2"></i> MongoDB</li>
+                <li><i class="fab fa-git-alt text-orange me-2"></i> Git & GitLab</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="row mt-4">
+            <div class="col-md-6">
+              <ul class="list-unstyled">
+                <li><i class="fas fa-server text-secondary me-2"></i> Plesk</li>
+                <li><i class="fas fa-cogs text-primary me-2"></i> CPanel</li>
+                <li><i class="fas fa-cloud text-info me-2"></i> Render</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🔹 Projects Section -->
+        <div class="tab-pane fade" id="projects" role="tabpanel">
+          <h3>Projects</h3>
           <div class="row p-4">
             <div class="col-md-12 mb-4">
               <i class="bi bi-check-circle text-success me-2"></i>Laravel E-Commerce Projects
@@ -461,109 +463,57 @@
           </div>
         </div>
 
-        <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
-          <h3 class="text-customtext mb-4"><i class="bi bi-star"></i> Skills</h3>
-
-          <div class="row">
-            <!-- Column 1 -->
-            <div class="col-md-6">
-              <ul class="list-unstyled">
-                <li><i class="fab fa-html5 text-danger me-2"></i> HTML5</li>
-                <li><i class="fab fa-css3-alt text-primary me-2"></i> CSS3</li>
-                <li><i class="fab fa-js text-warning me-2"></i> JavaScript</li>
-                <li><i class="fab fa-bootstrap text-purple me-2"></i> Bootstrap 5</li>
-                <li><i class="fab fa-react text-info me-2"></i> React.js</li>
-              </ul>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="col-md-6">
-              <ul class="list-unstyled">
-                <li><i class="fab fa-node-js text-success me-2"></i> Node.js</li>
-                <li><i class="fab fa-laravel text-danger me-2"></i> Laravel</li>
-                <li><i class="fas fa-database text-dark me-2"></i> MySQL</li>
-                <li><i class="fas fa-leaf text-green me-2"></i> MongoDB</li>
-                <li><i class="fab fa-git-alt text-orange me-2"></i> Git & GitLab</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Tools -->
-          <div class="row mt-4">
-            <div class="col-md-6">
-              <ul class="list-unstyled">
-                <li><i class="fas fa-server text-secondary me-2"></i> Plesk</li>
-                <li><i class="fas fa-cogs text-primary me-2"></i> CPanel</li>
-                <li><i class="fas fa-cloud text-info me-2"></i> Render</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-          <div class="container p-3" data-aos="fade" data-aos-delay="100">
-            <h5>Contact Me</h5>
-            <div class="row gy-4">
-              <div class="col-lg-12">
-                <form
-                  action="forms/contact.php"
-                  method="post"
-                  class="php-email-form"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <div class="row gy-4">
-                    <div class="col-md-6">
-                      <input type="text" name="name" class="form-control" placeholder="Your Name" required="" />
-                    </div>
-
-                    <div class="col-md-6">
-                      <input type="email" class="form-control" name="email" placeholder="Your Email" required="" />
-                    </div>
-
-                    <div class="col-md-12">
-                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="" />
-                    </div>
-
-                    <div class="col-md-12">
-                      <textarea
-                        class="form-control"
-                        name="message"
-                        rows="6"
-                        placeholder="Message"
-                        required=""
-                      ></textarea>
-                    </div>
-
-                    <div class="col-md-12 text-center">
-                      <div class="loading">Loading</div>
-                      <div class="error-message"></div>
-                      <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                      <button type="submit">Send Message</button>
-                    </div>
+        <!-- 🔹 Contact Section -->
+        <div class="tab-pane fade" id="contact" role="tabpanel">
+          <div class="row gy-4">
+            <div class="col-lg-12">
+              <form
+                action="forms/contact.php"
+                method="post"
+                class="php-email-form"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="" />
                   </div>
-                </form>
-              </div>
+
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="" />
+                  </div>
+
+                  <div class="col-md-12">
+                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                    <button type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
 
-    <footer id="footer" class="footer position-relative light-background">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <header id="header" class="header d-flex flex-column justify-content-center">
+      <i class="header-toggle d-xl-none bi bi-list"></i>
+    </header>
+
+    <footer id="footer" class="footer position-relative light-background mt-4">
       <div class="container">
-        <h3 class="sitename">Nabin Raj Chhetri</h3>
-
-        <div class="about-me">
-          <h4>About Me</h4>
-          <p>
-            Hello! I'm Nabin Raj Chhetri, a passionate developer with a strong background in backend development. I have
-            experience working with various technologies including Laravel, Node.js, and Express.js. I enjoy creating
-            efficient and scalable web applications and have a keen interest in learning new technologies and improving
-            my skills. In my free time, I love exploring new places and working on personal projects.
-          </p>
-        </div>
         <div class="social-links d-flex justify-content-center">
           <a href="https://x.com/NabinXettri3"><i class="bi bi-twitter"></i></a>
           <a href="https://www.facebook.com/nabin.raj.chhetri/"><i class="bi bi-facebook"></i></a>

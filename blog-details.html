@@ -3,7 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Blog Details</title>
+    <title>Loading...</title>
+
+    <title id="seo_title">Loading...</title>
+
+    <!-- ✅ Meta Tags with Unique IDs -->
+    <meta id="meta-description" name="description" content="Default description" />
+    <meta id="meta-keywords" name="keywords" content="Default, Keywords" />
+    <link id="canonical-link" rel="canonical" href="https://yourwebsite.com/default" />
+
+    <!-- ✅ Open Graph (OG) Meta Tags -->
+    <meta id="og-title" property="og:title" content="Default OG Title" />
+    <meta id="og-description" property="og:description" content="Default OG Description" />
+    <meta id="og-image" property="og:image" content="https://yourwebsite.com/default.jpg" />
+    <meta id="og-url" property="og:url" content="https://yourwebsite.com/default" />
+    <meta id="og-type" property="og:type" content="article" />
+
+    <!-- ✅ Twitter Meta Tags -->
+    <meta id="twitter-card" name="twitter:card" content="summary_large_image" />
+    <meta id="twitter-title" name="twitter:title" content="Default Twitter Title" />
+    <meta id="twitter-description" name="twitter:description" content="Default Twitter Description" />
+    <meta id="twitter-image" name="twitter:image" content="https://yourwebsite.com/default.jpg" />
+
+    <!-- ✅ Schema Markup (Will be updated dynamically) -->
+    <script id="seo-schema" type="application/ld+json"></script>
+    <!-- Default title before update -->
     <meta name="google-site-verification" content="LO-FU93rGZj3KmFKZEv_2Y_ve61QkGZh4C9nDDrxhxg" />
 
     <!-- Bootstrap CSS -->
@@ -88,6 +112,7 @@
       </div>
       <div class="text-lg font-semibold mt-4 text-gray-800">Hello, I'm Nabin. Welcome to my blog! 🚀</div>
     </div>
+
     <!-- Blog Container -->
     <div class="container mx-auto mt-20 px-4">
       <!-- Blog Banner -->
@@ -113,10 +138,37 @@
       </div>
 
       <!-- Breadcrumb -->
-      <nav class="mt-6 text-gray-500 text-sm">
-        <a href="/" class="hover:text-blue-500">Home</a> / <a href="/blog" class="hover:text-blue-500">Blog</a> /
-        <span id="blog-slug" class="text-gray-800 font-semibold">Loading...</span>
-      </nav>
+      <div class="flex flex-wrap items-center space-x-1 sm:space-x-2 bg-white shadow-md p-3 rounded-lg">
+        <!-- Home -->
+        <a
+          href="/"
+          class="flex items-center px-3 sm:px-4 py-2 bg-gray-100 text-gray-600 font-medium rounded-l-lg hover:bg-gray-200 transition"
+        >
+          <i class="fas fa-home mr-1 sm:mr-2"></i> <span class="hidden sm:inline">Home</span>
+        </a>
+
+        <!-- Blog -->
+        <div class="flex items-center">
+          <div
+            class="w-0 h-0 border-l-[8px] sm:border-l-[10px] border-l-gray-100 border-t-[12px] sm:border-t-[16px] border-t-transparent border-b-[12px] sm:border-b-[16px] border-b-transparent"
+          ></div>
+          <a
+            href="/blogs.html"
+            class="px-3 sm:px-4 py-2 bg-gray-100 text-gray-600 font-medium hover:bg-gray-200 transition"
+            >Blog</a
+          >
+        </div>
+
+        <!-- Blog Slug (Dynamic) -->
+        <div class="flex items-center">
+          <div
+            class="w-0 h-0 border-l-[8px] sm:border-l-[10px] border-l-gray-100 border-t-[12px] sm:border-t-[16px] border-t-transparent border-b-[12px] sm:border-b-[16px] border-b-transparent"
+          ></div>
+          <span id="blog-slug" class="px-3 sm:px-4 py-2 bg-gray-100 text-gray-600 font-medium rounded-r-lg"
+            >Loading...</span
+          >
+        </div>
+      </div>
 
       <!-- Blog Content -->
       <div class="container mx-auto mt-10 px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -171,11 +223,15 @@
             }
 
             let blog = response.data;
-            console.log("Blog fetched:", blog);
+            console.log("Blog fetched:", blog.seo_title);
+
+            // ✅ Fix Title Update
+            document.title = blog.seo_title; // Correct way to update <title>
 
             $("#blog-image").attr("src", blog.image);
             $("#blog-banner").attr("src", blog.banner);
             $("#blog-title").text(blog.name);
+            $("#blog-slug").text(blog.slug);
             $("#blog-meta").text(
               `Published on: ${new Date(blog.created_at).toDateString()} | Views: ${blog.post_view}`
             );
@@ -204,20 +260,16 @@
                 if (blog.slug !== currentSlug) {
                   // Exclude current blog
                   relatedHtml += `
-                                <a href="blog-details.html?slug=${
-                                  blog.slug
-                                }" class="flex items-center space-x-4 p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition">
-                                    <img src="${blog.image}" alt="${
-                    blog.name
-                  }" class="w-16 h-16 object-cover rounded-lg">
-                                    <div>
-                                        <h5 class="text-sm font-semibold text-gray-800">${blog.name}</h5>
-                                        <p class="text-xs text-gray-500">📅 ${new Date(
-                                          blog.created_at
-                                        ).toDateString()}</p>
-                                    </div>
-                                </a>
-                            `;
+                            <a href="blog-details.html?slug=${blog.slug}"
+                               class="flex items-center space-x-4 p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition">
+                                <img src="${blog.image}" alt="${blog.name}"
+                                     class="w-16 h-16 object-cover rounded-lg">
+                                <div>
+                                    <h5 class="text-sm font-semibold text-gray-800">${blog.name}</h5>
+                                    <p class="text-xs text-gray-500">📅 ${new Date(blog.created_at).toDateString()}</p>
+                                </div>
+                            </a>
+                        `;
                 }
               });
 
