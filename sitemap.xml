@@ -26,11 +26,7 @@
         <lastmod>2024-01-31</lastmod>
         <priority>0.6</priority>
     </url>
-    <url>
-        <loc>http://127.0.0.1:5500/blog-details.html?slug=adventure-sports-in-nepal</loc>
-        <lastmod>2024-01-31</lastmod>
-        <priority>0.6</priority>
-    </url>
+    
     <!-- Fetched Blog Pages -->
     <url>
         <loc>https://nabinchhetri.com.np/blogs/fetched-blog-slug-1.html</loc>
